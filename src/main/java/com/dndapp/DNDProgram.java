@@ -1,4 +1,7 @@
-import java.sql.SQLOutput;
+package com.dndapp;
+
+import com.dndapp.Character;
+
 import java.util.Scanner;
 
 public class DNDProgram {
