@@ -15,7 +15,7 @@ public class DiceRoll  {
             Arrays.sort(diceArr);
             int diceToAdd = diceArr[1] + diceArr[2] + diceArr[3];
             attributeNums.add(diceToAdd);
-            System.out.println(attributeNums);
+
 
         }
         Collections.sort(attributeNums);
