@@ -3,9 +3,13 @@ package com.dndapp;
 import java.util.*;
 
 public class DiceRoll  {
+    private List<Integer> attributeNums;
+
     private Random dice = new Random();
+
     public List<Integer> attributeDice(){
-        List<Integer> attributeNums = new ArrayList();
+
+        attributeNums = new ArrayList();
         for (int i = 0; i < 6; i++){
             int[] diceArr = new int[4];
             for(int j = 0; j < 4 ; j++){
@@ -20,6 +24,15 @@ public class DiceRoll  {
         }
         Collections.sort(attributeNums);
         Collections.reverse(attributeNums);
+        return attributeNums;
+    }
+
+
+    public void setAttributeNums(List<Integer> attributeNums) {
+        this.attributeNums = attributeNums;
+    }
+
+    public List<Integer> getAttributeNums() {
         return attributeNums;
     }
 }

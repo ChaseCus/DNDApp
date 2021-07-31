@@ -1,6 +1,6 @@
 package com.dndapp;
 
-import com.dndapp.Character;
+import com.dndapp.charclasses.Fighter;
 
 import java.util.Scanner;
 
@@ -9,8 +9,10 @@ public class DNDProgram {
     public static Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args){
-        DiceRoll diceRoll = new DiceRoll();
-        System.out.println(diceRoll.attributeDice());
+//        DiceRoll diceRoll = new DiceRoll();
+//        System.out.println(diceRoll.attributeDice());
+        Fighter fighter = new Fighter();
+        System.out.println(fighter.getStrengthAtt());
 
 
 
