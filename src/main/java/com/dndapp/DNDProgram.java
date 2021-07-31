@@ -11,6 +11,7 @@ public class DNDProgram {
     public static void main(String[] args){
 
 
+
         System.out.println("What do they call you?");
         String name = userInput.nextLine();
         character.setCharName(name);

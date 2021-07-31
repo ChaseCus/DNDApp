@@ -1,20 +1,25 @@
 package com.dndapp;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class DiceRoll  {
     private Random dice = new Random();
-    private List<Integer> attributeNums = new ArrayList();
-    public int dice(){
+    public List<Integer> attributeDice(){
+        List<Integer> attributeNums = new ArrayList();
         for (int i = 0; i < 6; i++){
-            int roll1 = dice.nextInt(6);
-            int roll2 = dice.nextInt(6);
-            int roll3 = dice.nextInt(6);
-            int roll4 = dice.nextInt(6);
+            int[] diceArr = new int[4];
+            for(int j = 0; j < 4 ; j++){
+                int roll = dice.nextInt(6);
+                diceArr[j] = roll;
+            }
+            Arrays.sort(diceArr);
+            int diceToAdd = diceArr[1] + diceArr[2] + diceArr[3];
+            attributeNums.add(diceToAdd);
+            System.out.println(attributeNums);
 
         }
-
+        Collections.sort(attributeNums);
+        Collections.reverse(attributeNums);
+        return attributeNums;
     }
 }
