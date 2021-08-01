@@ -1,10 +1,17 @@
+package com.dndapp;
+
 public class Character {
 
 
     private String charRace;
     private String charClass;
     private String charName;
-
+    private int strengthAtt;
+    private int dexterityAtt;
+    private int constitutionAtt;
+    private int intelligenceAtt;
+    private int wisdomAtt;
+    private  int charismaAtt;
 
     public String getCharRace() {
         return charRace;

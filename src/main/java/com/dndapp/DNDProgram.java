@@ -1,4 +1,7 @@
-import java.sql.SQLOutput;
+package com.dndapp;
+
+import com.dndapp.Character;
+
 import java.util.Scanner;
 
 public class DNDProgram {
@@ -6,6 +9,9 @@ public class DNDProgram {
     public static Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args){
+        DiceRoll diceRoll = new DiceRoll();
+        System.out.println(diceRoll.attributeDice());
+
 
 
         System.out.println("What do they call you?");
