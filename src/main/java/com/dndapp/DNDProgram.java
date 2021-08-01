@@ -1,7 +1,5 @@
 package com.dndapp;
 
-import com.dndapp.charclasses.Fighter;
-
 import java.util.Scanner;
 
 public class DNDProgram {
@@ -10,27 +8,7 @@ public class DNDProgram {
 
     public static void main(String[] args){
 
-        Fighter fighter = new Fighter();
-        System.out.println("STR " + fighter.getStrengthAtt());
-        System.out.println("CON " +fighter.getConstitutionAtt());
-        System.out.println("DEX "+fighter.getDexterityAtt());
-        System.out.println("INT "+fighter.getIntelligenceAtt());
-        System.out.println("WIS "+fighter.getWisdomAtt());
-        System.out.println("CAR " + fighter.getCharismaAtt());
-        System.out.println();
 
-
-
-
-
-
-
-
-
-        charSetUp();
-        System.out.println(character.getCharName());
-        System.out.println(character.getCharRace());
-        System.out.println(character.getCharClass());
     }
     public static void charSetUp(){
         System.out.println("What do they call you?");
@@ -50,6 +28,7 @@ public class DNDProgram {
             case 3: character.setCharRace("High Elf");
                 break;
             case 4: character.setCharRace("Human");
+
                 break;
             case 5: character.setCharRace("Tiefling");
                 break;
