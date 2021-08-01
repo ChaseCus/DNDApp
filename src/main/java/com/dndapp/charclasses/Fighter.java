@@ -4,12 +4,12 @@ import com.dndapp.*;
 
 public class Fighter {
     DiceRoll diceRoll = new DiceRoll();
-    private int strengthAtt = diceRoll.getAttributeNums().get(0);
-    private int constitutionAtt = diceRoll.getAttributeNums().get(1);
-    private int dexterityAtt = diceRoll.getAttributeNums().get(2);
-    private int intelligenceAtt = diceRoll.getAttributeNums().get(3);
-    private int wisdomAtt = diceRoll.getAttributeNums().get(4);
-    private int charismaAtt = diceRoll.getAttributeNums().get(5);
+    private int strengthAtt = diceRoll.attributeDice().get(0);
+    private int constitutionAtt = diceRoll.attributeDice().get(1);
+    private int dexterityAtt = diceRoll.attributeDice().get(2);
+    private int intelligenceAtt = diceRoll.attributeDice().get(3);
+    private int wisdomAtt = diceRoll.attributeDice().get(4);
+    private int charismaAtt = diceRoll.attributeDice().get(5);
 
 
 
