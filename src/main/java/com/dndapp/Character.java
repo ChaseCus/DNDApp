@@ -1,8 +1,12 @@
 package com.dndapp;
 
-public class Character extends Fighter{
+import java.util.List;
+
+public class Character  {
 
 
+    DiceRoll diceRoll = new DiceRoll();
+    private List<Integer> attributeList = diceRoll.attributeDice()
     private String charRace;
     private String charClass;
     private String charName;
@@ -17,18 +21,128 @@ public class Character extends Fighter{
 
 
     public Character(){
-        if (charClass.equals("Fighter")){
-            Fighter fighter = new Fighter();
-            strengthAtt = fighter.getStrengthAtt();
-            dexterityAtt = fighter.getDexterityAtt();
-            constitutionAtt = fighter.getConstitutionAtt();
-            intelligenceAtt = fighter.getIntelligenceAtt();
-            wisdomAtt = fighter.getWisdomAtt();
-            charismaAtt = fighter.getCharismaAtt();
+        if (charClass.equals("Barbarian")){
+
+            strengthAtt = attributeList.get(0);
+            dexterityAtt = attributeList.get(3);
+            constitutionAtt = attributeList.get(1);
+            intelligenceAtt = attributeList.get(4);
+            wisdomAtt = attributeList.get(3);
+            charismaAtt = attributeList.get(5);
+            hitPoints = 12;
+
+
+        }else if (charClass.equals("Bard")){
+
+            strengthAtt = attributeList.get(5);
+            dexterityAtt = attributeList.get(1);
+            constitutionAtt = attributeList.get(3);
+            intelligenceAtt = attributeList.get(2);
+            wisdomAtt = attributeList.get(4);
+            charismaAtt = attributeList.get(0);
+            hitPoints = 8;
+
+        }else if (charClass.equals("Cleric")){
+
+            strengthAtt = attributeList.get(1);
+            dexterityAtt = attributeList.get(5);
+            constitutionAtt = attributeList.get(2);
+            intelligenceAtt = attributeList.get(3);
+            wisdomAtt = attributeList.get(0);
+            charismaAtt = attributeList.get(4);
+            hitPoints = 8;
+
+        }else if (charClass.equals("Druid")){
+
+            strengthAtt = attributeList.get(3);
+            dexterityAtt = attributeList.get(2);
+            constitutionAtt = attributeList.get(1);
+            intelligenceAtt = attributeList.get(4);
+            wisdomAtt = attributeList.get(0);
+            charismaAtt = attributeList.get(5);
+            hitPoints = 8;
+
+    }else if (charClass.equals("Fighter")){
+
+            strengthAtt = attributeList.get(0);
+            dexterityAtt = attributeList.get(1);
+            constitutionAtt = attributeList.get(2);
+            intelligenceAtt = attributeList.get(3);
+            wisdomAtt = attributeList.get(4);
+            charismaAtt = attributeList.get(5);
             hitPoints = 10;
 
+        }else if (charClass.equals("Monk")){
+
+            strengthAtt = attributeList.get(0);
+            dexterityAtt = attributeList.get(1);
+            constitutionAtt = attributeList.get(2);
+            intelligenceAtt = attributeList.get(3);
+            wisdomAtt = attributeList.get(4);
+            charismaAtt = attributeList.get(5);
+            hitPoints = 10;
+
+        } else if (charClass.equals("Paladin")){
+
+            strengthAtt = attributeList.get(3);
+            dexterityAtt = attributeList.get(0);
+            constitutionAtt = attributeList.get(2);
+            intelligenceAtt = attributeList.get(4);
+            wisdomAtt = attributeList.get(1);
+            charismaAtt = attributeList.get(5);
+            hitPoints = 8;
+
+        }else if (charClass.equals("Ranger")){
+
+            strengthAtt = attributeList.get(5);
+            dexterityAtt = attributeList.get(0);
+            constitutionAtt = attributeList.get(2);
+            intelligenceAtt = attributeList.get(3);
+            wisdomAtt = attributeList.get(1);
+            charismaAtt = attributeList.get(4);
+            hitPoints = 10;
+
+        }else if (charClass.equals("Rogue")){
+
+            strengthAtt = attributeList.get(6);
+            dexterityAtt = attributeList.get(1);
+            constitutionAtt = attributeList.get(4);
+            intelligenceAtt = attributeList.get(3);
+            wisdomAtt = attributeList.get(5);
+            charismaAtt = attributeList.get(2);
+            hitPoints = 8;
+
+        }else if (charClass.equals("Sorcerer")){
+
+            strengthAtt = attributeList.get(5);
+            dexterityAtt = attributeList.get(4);
+            constitutionAtt = attributeList.get(1);
+            intelligenceAtt = attributeList.get(2);
+            wisdomAtt = attributeList.get(3);
+            charismaAtt = attributeList.get(0);
+            hitPoints = 6;
+
+        }else if (charClass.equals("Warlock")){
+
+            strengthAtt = attributeList.get(5);
+            dexterityAtt = attributeList.get(4);
+            constitutionAtt = attributeList.get(1);
+            intelligenceAtt = attributeList.get(3);
+            wisdomAtt = attributeList.get(2);
+            charismaAtt = attributeList.get(0);
+            hitPoints = 8;
+
+        }else if (charClass.equals("Wizard")){
+
+            strengthAtt = attributeList.get(5);
+            dexterityAtt = attributeList.get(2);
+            constitutionAtt = attributeList.get(1);
+            intelligenceAtt = attributeList.get(0);
+            wisdomAtt = attributeList.get(4);
+            charismaAtt = attributeList.get(3);
+            hitPoints = 6;
         }
-    }
+
 
     public String getCharRace() {
         return charRace;
