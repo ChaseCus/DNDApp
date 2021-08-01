@@ -1,5 +1,6 @@
 package com.dndapp;
 
+
 import java.util.*;
 
 public class DiceRoll  {
@@ -7,13 +8,14 @@ public class DiceRoll  {
 
     private Random dice = new Random();
 
+
     public List<Integer> attributeDice(){
 
         attributeNums = new ArrayList();
         for (int i = 0; i < 6; i++){
             int[] diceArr = new int[4];
             for(int j = 0; j < 4 ; j++){
-                int roll = dice.nextInt(6);
+                int roll = dice.nextInt(6) + 1;
                 diceArr[j] = roll;
             }
             Arrays.sort(diceArr);
@@ -28,11 +30,5 @@ public class DiceRoll  {
     }
 
 
-    public void setAttributeNums(List<Integer> attributeNums) {
-        this.attributeNums = attributeNums;
-    }
 
-    public List<Integer> getAttributeNums() {
-        return attributeNums;
-    }
 }
