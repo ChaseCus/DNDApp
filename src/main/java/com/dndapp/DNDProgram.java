@@ -1,7 +1,5 @@
 package com.dndapp;
 
-import com.dndapp.Character;
-
 import java.util.Scanner;
 
 public class DNDProgram {
@@ -9,15 +7,13 @@ public class DNDProgram {
     public static Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args){
-        DiceRoll diceRoll = new DiceRoll();
-        System.out.println(diceRoll.attributeDice());
 
 
-
+    }
+    public static void charSetUp(){
         System.out.println("What do they call you?");
         String name = userInput.nextLine();
         character.setCharName(name);
-
 
         System.out.println("What race are you?");
         System.out.println("1. Dragonborn \n2. Half-Orc \n3. High Elf \n4. Human \n5. Tiefling" );
@@ -32,19 +28,12 @@ public class DNDProgram {
             case 3: character.setCharRace("High Elf");
                 break;
             case 4: character.setCharRace("Human");
+
                 break;
             case 5: character.setCharRace("Tiefling");
                 break;
         }
 
-
-
-
-        System.out.println(character.getCharName());
-        System.out.println(character.getCharRace());
-        System.out.println(character.getCharClass());
-    }
-    public void charClass(){
         System.out.println("What class are you?");
         System.out.println("1. Barbarian \n2. Bard \n3. Cleric  \n4. Druid \n5. Fighter \n6. Monk \n7. Paladin \n8. Ranger \n9. Rogue \n10. Sorcerer \n11. Warlock \n12. Wizard" );
         int classNumber = userInput.nextInt();
@@ -76,6 +65,5 @@ public class DNDProgram {
             case 12: character.setCharClass("Wizard");
                 break;
         }
-
     }
 }
