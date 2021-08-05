@@ -5,9 +5,9 @@ import java.util.List;
 public class Character {
 
 
-    private String charRace;
-    private String charClass;
-    private String charName;
+    private String charRace = "";
+    private String charClass = "";
+    private String charName = "";
     private int hitPoints;
     private int strengthAtt;
     private int dexterityAtt;
@@ -22,7 +22,7 @@ public class Character {
 
     public Character(){
         if (charClass.equals("Fighter")){
-
+            this.charClass = "Fighter";
             strengthAtt = attribute.get(0);
             dexterityAtt = attribute.get(1);
             constitutionAtt = attribute.get(2);
