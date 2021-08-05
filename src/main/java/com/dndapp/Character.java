@@ -1,6 +1,8 @@
 package com.dndapp;
 
-public class Character extends Fighter{
+import java.util.List;
+
+public class Character {
 
 
     private String charRace;
@@ -14,17 +16,19 @@ public class Character extends Fighter{
     private int wisdomAtt;
     private int charismaAtt;
 
+    private DiceRoll diceRoll = new DiceRoll();
+    private List<Integer> attribute = diceRoll.attributeDice();
 
 
     public Character(){
         if (charClass.equals("Fighter")){
-            Fighter fighter = new Fighter();
-            strengthAtt = fighter.getStrengthAtt();
-            dexterityAtt = fighter.getDexterityAtt();
-            constitutionAtt = fighter.getConstitutionAtt();
-            intelligenceAtt = fighter.getIntelligenceAtt();
-            wisdomAtt = fighter.getWisdomAtt();
-            charismaAtt = fighter.getCharismaAtt();
+
+            strengthAtt = attribute.get(0);
+            dexterityAtt = attribute.get(1);
+            constitutionAtt = attribute.get(2);
+            intelligenceAtt = attribute.get(3);
+            wisdomAtt = attribute.get(4);
+            charismaAtt = attribute.get(5);
             hitPoints = 10;
 
         }
