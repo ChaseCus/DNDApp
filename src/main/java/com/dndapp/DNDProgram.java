@@ -3,11 +3,17 @@ package com.dndapp;
 import java.util.Scanner;
 
 public class DNDProgram {
-    public static Character character = new Character();
-    public static Scanner userInput = new Scanner(System.in);
+    private static Character character = new Character();
+    private static Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args){
-
+        charSetUp();
+        System.out.println(character.getCharName());
+        System.out.println(character.getCharRace());
+        System.out.println(character.getCharClass());
+        System.out.printf("Strength %d dex %d con %d int %d wis %d cha %d",
+                character.getStrengthAtt(), character.getDexterityAtt(), character.getConstitutionAtt(),
+                character.getIntelligenceAtt() , character.getWisdomAtt(), character.getCharismaAtt());
 
     }
     public static void charSetUp(){
