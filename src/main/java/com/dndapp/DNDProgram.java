@@ -88,9 +88,14 @@ public class DNDProgram {
         System.out.println(race);
         System.out.println(charClass);
         System.out.println(character.getCharName());
-        System.out.printf("Strength %d Dexterity %d Constitution %d Intelligence %d Wisdom %d Charisma %d",
+        System.out.println("Attributes");
+        System.out.printf("Strength: %d Dexterity: %d Constitution: %d Intelligence: %d Wisdom: %d Charisma: %d \n",
                 character.getStrengthAtt(), character.getDexterityAtt(), character.getConstitutionAtt(),
                 character.getIntelligenceAtt() , character.getWisdomAtt(), character.getCharismaAtt());
+        System.out.println("Attribute Mods");
+        System.out.printf("Strength: " + character.getStrMod(character.getStrengthAtt()) + " Dexterity: " + character.getDexMod(character.getDexterityAtt())  +
+                        " Constitution: " + character.getConMod(character.getConstitutionAtt()) + " Intelligence: " + character.getIntMod(character.getIntelligenceAtt())
+                + " Wisdom: " + character.getWisMod(character.getWisdomAtt()) + " Charisma: "+  character.getChaMod(character.getCharismaAtt()));
 
     }
 }

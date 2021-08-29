@@ -16,6 +16,7 @@ public class Character {
     private int wisdomAtt;
     private int charismaAtt;
 
+
     private DiceRoll diceRoll = new DiceRoll();
     private List<Integer> attributeList = diceRoll.attributeDice();
 
@@ -218,10 +219,126 @@ public class Character {
         this.charismaAtt = charismaAtt;
     }
 
-    public int getStrMod(int strengthAtt){
+   public String getStrMod(int strengthAtt){
+         if (strengthAtt == 4 || strengthAtt == 5){
+            return "-3";
+        }else if(strengthAtt == 6 || strengthAtt == 7){
+             return "-2";
+         }else if(strengthAtt == 8 || strengthAtt == 9){
+             return "-1";
+         }else if(strengthAtt == 10 || strengthAtt == 11){
+             return "0";
+         }else if(strengthAtt == 12 || strengthAtt == 13){
+             return "1";
+         }else if(strengthAtt == 14 || strengthAtt == 15){
+             return "2";
+         }else if(strengthAtt == 16 || strengthAtt == 17){
+             return "3";
+         }return "4";
 
 
 
     }
+    public String getDexMod(int dexterityAtt){
+        if (dexterityAtt == 4 || dexterityAtt == 5){
+            return "-3";
+        }else if(dexterityAtt == 6 || dexterityAtt == 7){
+            return "-2";
+        }else if(dexterityAtt == 8 || dexterityAtt == 9){
+            return "-1";
+        }else if(dexterityAtt == 10 || dexterityAtt == 11){
+            return "0";
+        }else if(dexterityAtt == 12 || dexterityAtt == 13){
+            return "1";
+        }else if(dexterityAtt == 14 || dexterityAtt == 15){
+            return "2";
+        }else if(dexterityAtt == 16 || dexterityAtt == 17){
+            return "3";
+        }return "4";
+
+
+
+    }
+    public String getConMod(int constitutionAtt){
+        if (constitutionAtt == 4 || constitutionAtt == 5){
+            return "-3";
+        }else if(constitutionAtt == 6 || constitutionAtt == 7){
+            return "-2";
+        }else if(constitutionAtt == 8 || constitutionAtt == 9){
+            return "-1";
+        }else if(constitutionAtt == 10 || constitutionAtt == 11){
+            return "0";
+        }else if(constitutionAtt == 12 || constitutionAtt == 13){
+            return "1";
+        }else if(constitutionAtt == 14 || constitutionAtt == 15){
+            return "2";
+        }else if(constitutionAtt == 16 || constitutionAtt == 17){
+            return "3";
+        }return "4";
+
+
+
+    }
+    public String getIntMod(int intelligenceAtt){
+        if (intelligenceAtt == 4 || intelligenceAtt == 5){
+            return "-3";
+        }else if(intelligenceAtt == 6 || intelligenceAtt == 7){
+            return "-2";
+        }else if(intelligenceAtt == 8 || intelligenceAtt == 9){
+            return "-1";
+        }else if(intelligenceAtt == 10 || intelligenceAtt == 11){
+            return "0";
+        }else if(intelligenceAtt == 12 || intelligenceAtt == 13){
+            return "1";
+        }else if(intelligenceAtt == 14 || intelligenceAtt == 15){
+            return "2";
+        }else if(intelligenceAtt == 16 || intelligenceAtt == 17){
+            return "3";
+        }return "4";
+
+
+
+    }
+    public String getWisMod(int wisdomAtt){
+        if (wisdomAtt == 4 || wisdomAtt == 5){
+            return "-3";
+        }else if(wisdomAtt == 6 || wisdomAtt == 7){
+            return "-2";
+        }else if(wisdomAtt == 8 || wisdomAtt == 9){
+            return "-1";
+        }else if(wisdomAtt == 10 || wisdomAtt == 11){
+            return "0";
+        }else if(wisdomAtt == 12 || wisdomAtt == 13){
+            return "1";
+        }else if(wisdomAtt == 14 || wisdomAtt == 15){
+            return "2";
+        }else if(wisdomAtt == 16 || wisdomAtt == 17){
+            return "3";
+        }return "4";
+
+
+
+    }
+    public String getChaMod(int charismaAtt){
+        if (charismaAtt == 4 || charismaAtt == 5){
+            return "-3";
+        }else if(charismaAtt == 6 || charismaAtt == 7){
+            return "-2";
+        }else if(charismaAtt == 8 || charismaAtt == 9){
+            return "-1";
+        }else if(charismaAtt == 10 || charismaAtt == 11){
+            return "0";
+        }else if(charismaAtt == 12 || charismaAtt == 13){
+            return "1";
+        }else if(charismaAtt == 14 || charismaAtt == 15){
+            return "2";
+        }else if(charismaAtt == 16 || charismaAtt == 17){
+            return "3";
+        }return "4";
+
+
+
+    }
+
 
 }
